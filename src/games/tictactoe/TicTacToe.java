@@ -1,22 +1,17 @@
 package games.tictactoe;
 
 public class TicTacToe {
-    private char[][] board = {
-            {'1', '2', '3'},
-            {'4', '5', '6'},
-            {'7', '8', '9'}
-    };
-
-    private void displayBoard() {
-        for (char[] row : board) {
-            for (char col : row) {
-                System.out.printf("%s ", col);
-            }
-            System.out.println();
-        }
-    }
+    private final Board board = new Board();
 
     public void run() {
-        displayBoard();
+        board.setupGame();
+        board.displayBoard();
+        while (!board.isGameOver()) {
+            board.promptMove();
+            board.displayBoard();
+        }
+        System.out.println(board.getWinner());
+        System.out.println(board.getLoser());
+        System.out.println("Game Over");
     }
 }
