@@ -146,7 +146,7 @@ public class Board {
                 hasWinner = true;
                 Piece winningPiece = Piece.valueOf(String.valueOf(value));
                 winner = playerOne.getPiece() == winningPiece ? playerOne : playerTwo;
-                loser = playerOne.getPiece() == winningPiece ? playerTwo : playerOne;
+                loser = playerOne.getPiece() != winningPiece ? playerOne : playerTwo;
                 break;
             }
         }
