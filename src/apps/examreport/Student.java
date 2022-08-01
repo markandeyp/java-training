@@ -1,6 +1,6 @@
 package apps.examreport;
 
-public class Student {
+public class Student{
     private final int MAX_MARKS = 150;
     private String name;
     private int scoreInMaths;
