@@ -1,4 +1,4 @@
-package students;
+package studentmap;
 
 import java.util.Objects;
 import java.util.Set;

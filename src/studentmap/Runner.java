@@ -1,11 +1,14 @@
-package students;
+package studentmap;
+
+import students.ExamData;
+import students.Student;
 
 import java.util.Scanner;
 import java.util.Set;
 
 public class Runner {
     public static void main(String[] args) {
-        Set<Student> Name;
+        Set<students.Student> Name;
         final Scanner scanner = new Scanner(System.in);
 //        ExamReport app = new ExamReport();
         ExamData app = new ExamData();
@@ -23,17 +26,18 @@ public class Runner {
                 }
                 break;
             case 2:
-                System.out.println("enter percentage");
+                System.out.println("Enter percentage to search");
                 Name= app.searchByPercentage(scanner.nextFloat());
-                for (Student stud : Name) {
-                    System.out.println(stud);
+                for (students.Student stud : Name) {
+                    boolean Stud = false;
+                    System.out.println(Stud);
                 }
                 break;
 
         }
-            System.out.println("Do you want to continue ? (Y/N) OR (y/n)");
+            System.out.println("To continue y  or n");
             loop=scanner.next().charAt(0);
         }
-        while(loop=='y'||loop=='y');
+        while(loop=='Y'||loop=='y');
     }
 }
