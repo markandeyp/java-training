@@ -1,14 +1,13 @@
 package studentmap;
 
-import students.ExamData;
-import students.Student;
+//import students.ExamData;
 
 import java.util.Scanner;
 import java.util.Set;
 
 public class Runner {
     public static void main(String[] args) {
-        Set<students.Student> Name;
+        Set<studentmap.Student> Name;
         final Scanner scanner = new Scanner(System.in);
 //        ExamReport app = new ExamReport();
         ExamData app = new ExamData();
@@ -28,9 +27,8 @@ public class Runner {
             case 2:
                 System.out.println("Enter percentage to search");
                 Name= app.searchByPercentage(scanner.nextFloat());
-                for (students.Student stud : Name) {
-                    boolean Stud = false;
-                    System.out.println(Stud);
+                for (Student stud : Name) {
+                    System.out.println(stud);
                 }
                 break;
 
